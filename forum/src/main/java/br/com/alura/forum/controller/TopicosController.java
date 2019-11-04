@@ -3,6 +3,9 @@ package br.com.alura.forum.controller;
 import java.net.URI;
 import java.util.List;
 
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,7 +53,7 @@ public class TopicosController {
 	                 quando é get o parametro é passado na url  
 	                 mas se tratando de post precisamos avisar o Spring que será
 	                 passado um parâmetro no corpo da requisição */
-	public ResponseEntity<TopicoDto> cadastrar(@RequestBody TopicoForm form,
+	public ResponseEntity<TopicoDto> cadastrar(@RequestBody  @Valid TopicoForm form,
 			                                   UriComponentsBuilder uriBuilder ) {
 		Topico topico =  form.converter(cursoRepository);
 		topicoRepository.save(topico);
