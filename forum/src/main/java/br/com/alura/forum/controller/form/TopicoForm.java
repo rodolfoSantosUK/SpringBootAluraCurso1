@@ -12,7 +12,7 @@ import br.com.alura.forum.modelo.Topico;
 public class TopicoForm {
 
 	
-	@NotNull @NotEmpty @Length(min = 5)
+	@NotNull @NotEmpty  
 	private String titulo;
 	@NotNull @NotEmpty @Length(min = 5)
 	private String mensagem;
