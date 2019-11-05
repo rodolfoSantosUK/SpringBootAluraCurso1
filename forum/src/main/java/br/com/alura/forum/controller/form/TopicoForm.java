@@ -19,7 +19,9 @@ public class TopicoForm {
 	@NotNull @NotEmpty 
 	private String nomeCurso;
 	
-	
+	public TopicoForm() {
+		super();
+	}
 	public String getTitulo() {
 		return titulo;
 	}
